@@ -1,17 +1,19 @@
 # User Validation
 
-first_name=input("Enter First Name: ")
-if first_name.isalpha():
-    if len(first_name)>=3 and len(first_name)<=10:
-        print("First Name:", first_name)
-    else:
-        print("invalid name")
-elif first_name.isalnum():
-    print("Number are not allow")
-elif first_name.isalpha() == False or first_name.isalnum() == False:
-    print("NNot valid")
+first_name = input("Enter First Name: ")
+num = ('0','1','2','3','4','5','6','7','8','9')
+
+invalid_name = False
+
+for i in first_name:
+    if i in num:
+        invalid_name = True
+        break
+
+if invalid_name:
+    print("invalid name")
 else:
-    print("not valid")
+    print("first name:", first_name)
 
 
 
