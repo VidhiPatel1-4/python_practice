@@ -10,7 +10,6 @@ elif first_name.isalnum():
     print("Number are not allow")
 elif first_name.isalpha() == False or first_name.isalnum() == False:
     print("NNot valid")
-
 else:
     print("not valid")
 
