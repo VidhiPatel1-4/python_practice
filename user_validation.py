@@ -1,19 +1,33 @@
 # User Validation
 
-first_name = input("Enter First Name: ")
-num = ('0','1','2','3','4','5','6','7','8','9')
+while True:
+    # Take first name input from the user
+    first_name = input("Enter Your First Name: ")
 
-invalid_name = False
+    # Define valid characters for letters and spaces
+    valid_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-for i in first_name:
-    if i in num:
-        invalid_name = True
+    # Initialize validation without using a separate boolean variable
+    for char in first_name:
+        # Check if character is a number
+        if len(valid_chars) < 3 or len(valid_chars) > 10:
+            print("Error: First name not valid.")
+            break
+        if char>='0' and char<='9':
+            print("Error: First name contains numbers.")
+            break
+        elif char == " ":
+            print("Error: First name contains space.")
+            break
+        # Check if character is a special character
+        elif char not in valid_chars:
+            print("Error: First name contains special characters.")
+            break
+    else:
+        # This else block is executed if no break occurred in the for loop,
+        # meaning the first name is valid
+        print("First Name:", first_name)
         break
-
-if invalid_name:
-    print("invalid name")
-else:
-    print("first name:", first_name)
 
 
 
