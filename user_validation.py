@@ -10,7 +10,7 @@ while True:
     # Initialize validation without using a separate boolean variable
     for char in first_name:
         # Check if character is a number
-        if len(valid_chars) < 3 or len(valid_chars) > 10:
+        if len(first_name) < 3 or len(first_name) > 10:
             print("Error: First name not valid.")
             break
         if char>='0' and char<='9':
