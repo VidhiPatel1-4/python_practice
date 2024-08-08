@@ -52,10 +52,28 @@ while True:
         print("Phone Number: ", phone_number)
         break
 
+while True:
+    email_id = input("Enter Email Id :").lower()
 
+    valid_chars = "abcdefghijklmnopqrstuvwxyz0123456789.@"
+    domain_value = "@gmail.com"
 
+    for chars in email_id:
+        if not email_id.endswith(domain_value):
+            print("Error: Email id does not contains @gmail.com")
+            break
 
+        elif " " in email_id:
+            print("Error: Email id contains space")
+            break
 
+        elif chars not in valid_chars:
+            print("Error: Email id contains invalid character")
+            break
+
+    else:
+        print("Email Id :", email_id)
+        break
 
 
 
