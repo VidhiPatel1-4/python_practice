@@ -1,3 +1,4 @@
+print()
 
 stone = 1
 paper = 2
@@ -15,30 +16,17 @@ else:
     elif user_input == stone:
         if computer_input == paper:
             print("Computer Wins")
-
-        elif user_input == stone:
-            if computer_input == scissor:
-                print("User Wins")
+        else:
+            print("User Wins")
 
     elif user_input == paper:
         if computer_input == stone:
             print("User Wins")
-
-        elif user_input == paper:
-            if computer_input == scissor:
-                print("Computer Wins")
+        else:
+            print("Computer Wins")
 
     elif user_input == scissor:
         if computer_input == stone:
             print("Computer Wins")
-
-        elif user_input == scissor:
-            if computer_input == paper:
-                print("User Wins")
-
-
-
-
-
-
-
+        else:
+            print("User Wins")
